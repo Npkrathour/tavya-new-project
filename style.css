@@ -5,6 +5,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body.modal {
+  padding-left: 0px;
+}
 
 :root {
   --primaryColor: #ff7f50;
@@ -368,22 +371,10 @@ p {
   width: 30px;
 }
 /* main */
-.main-tab .bg-color {
+.main-tab.bg-color {
   background-color: #ff7f50;
 }
 /* ==================================== */
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: transparent;
-  background-color: transparent;
-}
-.nav-pills {
-  /* float: right; */
-  padding-left: 7%;
-}
-.main-tab .nav-item {
-  padding: 0px 30px;
-}
 /* ==================================slider============================ */
 .modal-buttons li a {
   text-decoration: none;
@@ -405,7 +396,7 @@ p {
   font-weight: 600;
 }
 .tabs-section .col-lg-2 {
-  padding-left: 15px;
+  padding-left: 10px;
   z-index: 1;
 }
 .our-services h1 {
@@ -549,6 +540,14 @@ p {
   font-size: 16px;
   font-weight: 600;
 }
+.main-form .btn:hover {
+  background-color: #f04975;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px 45px;
+  font-size: 16px;
+  font-weight: 600;
+}
 .home-section {
   background-color: #ff7f50;
   height: 700px;
@@ -580,7 +579,7 @@ p {
   font-weight: 500;
 }
 .nav-item p {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
 }
 .acccesories-inner-details h4 {
@@ -596,8 +595,35 @@ p {
 .border-up-line {
   background-color: #f04975;
 }
+.Services-images h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+.modal {
+  padding-left: 0px !important;
+}
+.modal-up .form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #f04975 !important;
+  outline: 0;
+  box-shadow: none;
+}
+.modal-up .form-control:focus-visible {
+  border-color: #f04975 !important;
+}
 /* ===============gif animation============= */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .animated-images {
   position: relative;
   animation: mymove 4s infinite;
