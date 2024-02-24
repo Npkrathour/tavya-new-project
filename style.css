@@ -631,7 +631,14 @@ p {
   width: 80px;
   object-fit: cover;
 }
-
+.modal-up ul li {
+  width: 100%;
+  max-width: 50%;
+}
+.modal-up ul li a {
+  width: 100%;
+  max-width: 100%;
+}
 /* ===============gif animation============= */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
