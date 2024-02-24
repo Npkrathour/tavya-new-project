@@ -613,6 +613,25 @@ p {
 .modal-up .form-control:focus-visible {
   border-color: #f04975 !important;
 }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  background: transparent;
+}
+#myBtn img {
+  width: 80px;
+  object-fit: cover;
+}
+
 /* ===============gif animation============= */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -624,9 +643,9 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-.animated-images {
+#myBtn img {
   position: relative;
-  animation: mymove 4s infinite;
+  animation: mymove 6s ease-in;
 }
 
 @keyframes mymove {
@@ -634,12 +653,12 @@ input[type="number"] {
     top: 0px;
   }
   25% {
-    top: 100px;
-  }
-  75% {
     top: 50px;
   }
+  75% {
+    top: 0px;
+  }
   100% {
-    top: 100px;
+    top: 50px;
   }
 }
