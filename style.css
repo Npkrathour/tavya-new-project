@@ -708,13 +708,13 @@ input[type="number"] {
   object-fit: cover;
 }
 .home-content span {
-  font-size: 120px;
-  font-weight: 700;
-  letter-spacing: 15px;
+  font-size: 130px;
+  font-weight: 500;
+  letter-spacing: 5px;
   color: #ffffff;
 }
 .home-content h1 {
-  font-size: 120px;
-  font-weight: 700;
-  letter-spacing: 15px;
+  font-size: 130px;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
