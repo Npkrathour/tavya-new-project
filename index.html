@@ -64,12 +64,6 @@
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-10">
-                        <!-- <div class="home-banner">
-                            <img src="assets/images/home-banner.gif" alt="">
-                        </div>
-                        <div class="mobile-banner d-lg-none d-md-none d-block">
-                            <img src="assets/images/mobile-home-banner.gif" alt="">
-                        </div> -->
                         <div class="home-content">
                             <h1><span>your</span> <br>EXPERIENCE MATTERS</h1>
                         </div>
@@ -172,26 +166,23 @@
                                                 <div class="modal-up">
                                                     <div class="mb-4">
                                                         <h2>Hi there,</h2>
-                                                    </div>
-                                                    <div>
                                                         <h3>Fill out the form to download the Magazine.</h3>
                                                     </div>
                                                     <form get="" action="" class=" ">
                                                         <div class="group mb-3">
                                                             <input
                                                                 class="px-3 py-2 rounded-start border border-warning border outline-0 form-control"
-                                                                type="text" placeholder="Enter Name Here..." />
+                                                                type="text" placeholder="Full Name" />
                                                         </div>
                                                         <div class="group mb-3">
                                                             <input
                                                                 class="px-3 py-2 rounded-start border border-warning border outline-0 form-control"
-                                                                type="number" placeholder="Number" />
+                                                                type="number" placeholder="Contact Number" />
                                                         </div>
                                                         <div class="d-flex gap-0">
                                                             <input
                                                                 class="px-3 py-2 flex-grow-1 rounded-start border border-warning border-end-0 outline-0 form-control"
-                                                                type="email"
-                                                                placeholder="kindly enter your email here..."
+                                                                type="email" placeholder="Email id"
                                                                 style="border-radius: 5px 0px 0px 5px;" />
                                                             <button
                                                                 class="py-2 px-3 rounded-end border-0 border-up-line text-white d-flex justify-content-center align-items-center">
@@ -207,14 +198,10 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
         </section>
-
-
         <!-- ===========================tabs=================== -->
         <section class="tabs-section padding-top-bottom" id="Services">
             <div class="container">
@@ -289,11 +276,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
         <!-- ===================================================== -->
         <section class="our-work padding-top-bottom" id="Store" data-aos="fade-up">
             <div class="container">
@@ -317,11 +302,63 @@
                                 <strong>WedMeGood</strong> and <strong> WeddingWire</strong>. We invite you to visit our
                                 profile to discover the wide range of exciting new options available for gifts.
                             </p>
+                            <div class="enquiry-form">
+                                <button class="btn" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#enquiryModal">Enquiry Now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Modal -->
+        <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <!-- <div class="modal-header border-0">
+                        <button type="button" class="btn-close bg-secondary p-2 rounded-circle position-absolute"
+                            style="top: 15px;right: 15px;" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> -->
+                    <div class="modal-body enquiry-form-modal py-3">
+                        <h1>Enquiry Form</h1>
+                        <div class="row">
+                            <form action="" method="post">
+                                <div class="col-12 mb-2">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label for="number">Contact Number</label>
+                                    <input type="number" class="form-control" id="number">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label for="email">Email Id</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label for="">Per Hamper Budget (if decided)
+                                    </label>
+                                    <input type="number" class="form-control" placeholder="INR" id="number">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label for="">No. of Gift Hampers (approx)
+                                    </label>
+                                    <input type="number" class="form-control" placeholder="00" id="number">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label for="">Requirements (if any)
+                                    </label>
+                                    <textarea name="" id="" class="form-control"></textarea>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <button class="btn" type="button" value="button">Submit Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- =================================Form container=================== -->
         <section class="form-section shadow border position-fixed bottom-0 w-100 bg-white z-3">
             <div class="container-fluid">
@@ -339,40 +376,32 @@
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="mb-3">
-
-                                            <input type="number" name="" id="" class="form-control" placeholder="Number"
-                                                aria-describedby="helpId" />
+                                            <input type="number" name="" id="" class="form-control"
+                                                placeholder="Contact Number" aria-describedby="helpId" />
                                         </div>
-
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="mb-3">
-
                                             <input type="email" name="" id="" class="form-control"
                                                 placeholder="Email id" aria-describedby="helpId" />
                                         </div>
-
                                     </div>
-
                                     <div class="col-lg-2">
                                         <div class="mb-3">
-
                                             <select class="form-select form-select-lg mb-3"
                                                 aria-label="Large select example">
-                                                <option selected>Requirements</option>
+                                                <option selected disabled>Requirements</option>
                                                 <option value="1"> Wedding Favors</option>
                                                 <option value="2">Event Gifts</option>
                                                 <option value="3">Corporate Gifts</option>
                                                 <option value="3">Others</option>
                                             </select>
                                         </div>
-
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="mb-3">
                                             <button type="button" class="btn text-white" value="">Submit</button>
                                         </div>
-
                                     </div>
                                 </div>
                             </form>
@@ -704,7 +733,7 @@
                     <div class="mobile-number-details">
                         <div class="text-center">
                             <p><a href="tel:7355462016">+ 91 9027919611</a></p>
-                            <a href="mailto:office@gmail.com"> hello@tavya.in </a>
+                            <a href="mailto:hello@tavya.in"> hello@tavya.in </a>
                         </div>
                     </div>
                 </div>
@@ -712,7 +741,6 @@
                     <div class="address-details text-end">
                         <h3>Location : Noida,
                             <br> Uttar Pradesh
-
                         </h3>
                     </div>
                 </div>

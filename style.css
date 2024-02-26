@@ -559,10 +559,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-.home-section .home-banner img {
-  width: 100%;
-  height: auto;
-}
 
 .we-love {
   padding: 0px 150px 0px 0px;
@@ -717,4 +713,55 @@ input[type="number"] {
   font-size: 140px;
   font-weight: 500;
   letter-spacing: 5px;
+}
+.enquiry-form .btn {
+  background-color: #f04975;
+  padding: 8px 25px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.enquiry-form .btn:hover {
+  background-color: #f04975;
+  padding: 8px 25px;
+  color: #ffffff;
+}
+.enquiry-form-modal .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  background-color: #f3f3f3;
+  border: 1px solid #7a7a7a;
+  border-radius: 5px;
+}
+.enquiry-form-modal .form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #f04975 !important;
+  outline: 0;
+  box-shadow: none;
+}
+.enquiry-form-modal .form-control:focus-visible {
+  border-color: #f04975 !important;
+}
+.enquiry-form-modal label {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.enquiry-form-modal .btn {
+  background-color: #f04975;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 25px;
+}
+.enquiry-form-modal .btn:hover {
+  background-color: #f04975;
+  color: #ffffff;
+  padding: 8px 25px;
 }
