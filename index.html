@@ -13,23 +13,24 @@
     <meta property="og:image"
         content="https://npkrathour.github.io/tavya-new-project/assets/images/animation-gif.webp" />
     <title>Tavya</title>
-    <link rel="icon" href="assets/images/tavya.png" type="icon">
+    <link rel="icon" href="./assets/images/tavya.png" type="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">
         <img src="assets/images/animation-gif.webp" alt="">
-    </button>
+    </button> -->
     <!-- ===============Navigation bar============ -->
     <div class="main">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">Tavya.in</a>
+                <a class="navbar-brand" href="#"><img src="assets/images/logo.png" style="width: 60px;" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +77,7 @@
         <section class="who-we-are padding-top-bottom" id="about">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-5 col-md-6 col-12 my-3 position-relative">
+                    <div class="col-lg-5 col-md-5 col-12 my-3 position-relative">
                         <div class="py-4">
                             <h1 class="big-text py-3" data-aos="fade-up">
                                 WHO<br />
@@ -86,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-6 col-12 my-3">
+                    <div class="col-lg-7 col-md-7 col-12 my-3">
                         <div class="we-are-body" data-aos="fade-up">
                             <h4>Auspicious gifting options for various Indian celebrations</h4>
                             <p>Tavya presents an extensive collection of auspicious gifts catering to diverse Indian
@@ -95,12 +96,12 @@
                                 festivals, anniversaries, and other memorable occasions, turning each celebration into a
                                 cherished moment. At Tavya, we prioritize the significance of your relationships and
                                 offer personalized gift solutions tailored to your budget and preferences.</p>
-                            <div class="Documents-btn">
-                                <a href="assets/images/tavya-wedding-favors.pdf" class="Documents-btn btn" type="button"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-
-                                    <p class="text">DOWNLOAD FREE</p>
-                                    <img src="assets/images/sheet.png" alt="" style="width: 30px;">
+                            <strong>Want to know more about our gifting services? Click to download our magazine.
+                            </strong>
+                            <div class="Documents-btn py-2">
+                                <a href="#!" class="btn" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    Download Now
                                 </a>
                             </div>
                         </div>
@@ -133,17 +134,17 @@
                                                         </div>
                                                         <div class="carousel-inner">
                                                             <div class="carousel-item active" data-bs-interval="10000">
-                                                                <img src="assets/images/Bridesmaid_gifts_1.jpg"
-                                                                    class="d-block w-100" alt="...">
+                                                                <img src="assets/images/first-page.webp"
+                                                                    class="d-block w-100 object-fit-cover" alt="...">
 
                                                             </div>
                                                             <div class="carousel-item" data-bs-interval="2000">
-                                                                <img src="assets/images/Bridesmaid_gifts_3.jpg"
-                                                                    class="d-block w-100" alt="...">
+                                                                <img src="assets/images/second-page.webp"
+                                                                    class="d-block w-100 object-fit-cover" alt="...">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="assets/images/Haldi_Favor_1.jpg"
-                                                                    class="d-block w-100" alt="...">
+                                                                <img src="assets/images/third-page.webp"
+                                                                    class="d-block w-100 object-fit-cover" alt="...">
 
                                                             </div>
                                                         </div>
@@ -206,7 +207,7 @@
         <section class="tabs-section padding-top-bottom" id="Services">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-lg-2 position-relative">
+                    <div class="col-lg-2 col-md-12 col-12 position-relative">
                         <div class="our-services py-4" data-aos="fade-right">
                             <h1>Our Services</h1>
                         </div>
@@ -214,10 +215,10 @@
                             data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                         </div>
                     </div>
-                    <div class="col-lg-10">
-                        <div class="main-tab bg-color py-lg-5 px-lg-4" data-aos="fade-up">
+                    <div class="col-lg-10 col-md-12 col-12 ">
+                        <div class="main-tab bg-color py-lg-5 py-3 px-lg-4" data-aos="fade-up">
                             <div class="row justify-content-evenly">
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/wedding-favors.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -225,7 +226,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/inroom-hampers.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -233,7 +234,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/haldi-favors.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -241,7 +242,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/mehandi-favors.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -249,7 +250,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/bridesmaids-gift.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -257,7 +258,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/online-shopping.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -265,7 +266,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 col-md-3 col-12">
                                     <div class="Services-images text-center">
                                         <img src="assets/images/corporate-gifts.png" alt="" style="width: 60px;">
                                         <div class="text-center">
@@ -315,10 +316,6 @@
         <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <!-- <div class="modal-header border-0">
-                        <button type="button" class="btn-close bg-secondary p-2 rounded-circle position-absolute"
-                            style="top: 15px;right: 15px;" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div> -->
                     <div class="modal-body enquiry-form-modal py-3">
                         <h1>Enquiry Form</h1>
                         <div class="row">
@@ -360,33 +357,37 @@
             </div>
         </div>
         <!-- =================================Form container=================== -->
-        <section class="form-section shadow border position-fixed bottom-0 w-100 bg-white z-3">
+        <section class="form-section shadow border position-fixed bottom-0 w-100 bg-white z-3 d-lg-block d-none">
             <div class="container-fluid">
-                <div class="row justify-content-between align-items-center">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-lg-12">
                         <div class="main-form pt-3">
                             <form action="" method="get">
                                 <div class="row justify-content-center align-items-center">
-                                    <div class="col-lg-3">
-                                        <div class="mb-3 d-flex justify-content-center align-items-center">
-                                            <label for="" class="form-label">Contact Us : </label>
+                                    <div class="col-lg-2 text-center col-md-6 col-12 my-2">
+                                        <div class="mb-3">
+                                            <h3>Contact Us:</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-6 col-12 my-2">
+                                        <div class="mb-3">
                                             <input type="text" name="" id="" class="form-control" placeholder="Name"
                                                 aria-describedby="helpId" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-2 col-md-6 col-12">
                                         <div class="mb-3">
                                             <input type="number" name="" id="" class="form-control"
                                                 placeholder="Contact Number" aria-describedby="helpId" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-2 col-md-6 col-12">
                                         <div class="mb-3">
                                             <input type="email" name="" id="" class="form-control"
                                                 placeholder="Email id" aria-describedby="helpId" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-2 col-md-6 col-12">
                                         <div class="mb-3">
                                             <select class="form-select form-select-lg mb-3"
                                                 aria-label="Large select example">
@@ -398,7 +399,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-2 col-md-6 col-12">
                                         <div class="mb-3">
                                             <button type="button" class="btn text-white" value="">Submit</button>
                                         </div>
@@ -496,70 +497,62 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="assets/images/Bridesmaid_gifts_1.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-1.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="1400">
-                        <img src="assets/images/Bridesmaid_gifts_Bridesmaid_gifts_2.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-2.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="1800">
-                        <img src="assets/images/Bridesmaid_gifts_3.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-3.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="2200">
-                        <img src="assets/images/Haldi_Favor_1.jpg" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-4.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="600">
-                        <img src="assets/images/Haldi_favor_2.jpg" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-5.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="800">
-                        <img src="assets/images/Haldi_Favor_3.jpg" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-6.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="assets/images/Haldi_favor_4.jpg" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-7.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="1200">
-                        <img src="assets/images/Bridesmaid_gifts_1.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-8.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="3600">
-                        <img src="assets/images/Inroom_hampers_1.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-9.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="3600">
-                        <img src="assets/images/Inroom_hampers_2.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-10.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="3600">
-                        <img src="assets/images/Inroom_hampers_3.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/Gallery-11.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 my-3">
                     <div class="inner-gallery" data-aos="fade-up" data-aos-duration="3600">
-                        <img src="assets/images/Inroom_hampers_4.jpg" alt=""
-                            class="w-100 img-fluid rounded-5 shadow-lg">
+                        <img src="assets/images/gallery-12.webp" alt="" class="w-100 img-fluid rounded-5 shadow-lg">
                     </div>
                 </div>
             </div>
@@ -567,22 +560,22 @@
     </section>
     <!-- ====================testimonials section=========== -->
     <section class="testimonials-sliders padding-top-bottom">
-        <div class="container py-5">
+        <div class="container py-3">
             <div class="row justify-content-center align-items-center">
-                <div class="col-lg-10 border-lg py-5">
+                <div class="col-lg-10 border-lg py-3">
                     <div class="owl-carousel owl-theme">
                         <div class="item py-4">
                             <div class="row justify-content-center align-items-center gap-3">
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     <div class="testimonials-image text-center">
-                                        <img src="assets/images/Haldi_Favor_1.jpg" alt="">
+                                        <img src="assets/images/Review-1.webp" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="testimonials-content">
                                         <img src="assets/images/quote.png" alt="" style="width: 30px;">
                                         <div class="d-flex justify-content-between testimonials-name">
-                                            <p>Anjuda <span>- Developer</span></p>
+                                            <p>Ketki Deshpande <span>- Bride</span></p>
                                             <div class="star-icon">
                                                 <span class="iconify" data-icon="ic:baseline-star"></span>
                                                 <span class="iconify" data-icon="ic:baseline-star"></span>
@@ -592,10 +585,14 @@
                                             </div>
                                         </div>
                                         <div class="main-slide-content">
-                                            <h2 class="py-1">Our Customer Services Available</h2>
-                                            <p>We purchased these hampers as gifts for our family and friends, and they
-                                                were delighted with them. The quality of the hampers and the attractive
-                                                packaging made them a perfect choice.
+                                            <h2 class="py-1">Indeed a perfect experience.</h2>
+                                            <p>It was a wonderful experience with them. They curated each gift
+                                                absolutely according to our family’s requirements. We had ordered tea
+                                                sets with personalized notes and chocolates as wedding return favors for
+                                                our wedding. The packaging was absolutely perfect. Everyone loved the
+                                                favors. All the very best for the future!
+
+
                                             </p>
                                             <div class="text-end">
                                                 <img src="assets/images/quote.png" alt="" style="width: 30px;">
@@ -607,16 +604,17 @@
                         </div>
                         <div class="item py-4">
                             <div class="row justify-content-center align-items-center gap-3">
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     <div class="testimonials-image text-center">
-                                        <img src="assets/images/Haldi_Favor_1.jpg" alt="">
+                                        <img src="assets/images/Review-2.webp" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="testimonials-content">
                                         <img src="assets/images/quote.png" alt="" style="width: 30px;">
                                         <div class="d-flex justify-content-between testimonials-name">
-                                            <p>Sushmita <span>- Bride</span></p>
+                                            <p>Anshna <span>- Bride’s Sister
+                                                </span></p>
                                             <div class="star-icon">
                                                 <span class="iconify" data-icon="ic:baseline-star"></span>
                                                 <span class="iconify" data-icon="ic:baseline-star"></span>
@@ -627,45 +625,13 @@
                                         </div>
                                         <div class="main-slide-content">
                                             <h2 class="py-1">Amazing wedding gift hampers
+
                                             </h2>
-                                            <p>One of my friends recommended me your brand and we understand why she
-                                                loves your brand and your work. Thank you for the gift hampers,
-                                                everybody loves them!</p>
-                                            <div class="text-end">
-                                                <img src="assets/images/quote.png" alt="" style="width: 30px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item py-4">
-                            <div class="row justify-content-center align-items-center gap-3">
-                                <div class="col-lg-3">
-                                    <div class="testimonials-image text-center">
-                                        <img src="assets/images/Mehndi_hamper_1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="testimonials-content">
-                                        <img src="assets/images/quote.png" alt="" style="width: 30px;">
-                                        <div class="d-flex justify-content-between testimonials-name">
-                                            <p>Krati <span>- Bride’s Sister</span></p>
-                                            <div class="star-icon">
-                                                <span class="iconify" data-icon="ic:baseline-star"></span>
-                                                <span class="iconify" data-icon="ic:baseline-star"></span>
-                                                <span class="iconify" data-icon="ic:baseline-star"></span>
-                                                <span class="iconify" data-icon="ic:baseline-star"></span>
-                                                <span class="iconify" data-icon="ic:baseline-star"></span>
-                                            </div>
-                                        </div>
-                                        <div class="main-slide-content">
-                                            <h2 class="py-1">Glad to find you, it was a great experience</h2>
-                                            <p>We have enjoyed every step of the experience with Tavya. They went above
-                                                and beyond to deliver our order through personal transportation to
-                                                ensure it reached us on time due to the bulk order with limited time!
-                                                Thank you so much for making our wedding day memorable. You and your
-                                                hard-working team. Absolutely recommend.
+                                            <p> I ordered gift hampers for my wedding, and they were arranged on time.
+                                                They were flexible and provided me with gorgeous and unique options to
+                                                choose from. The hampers were so well packed and delivered to my home. I
+                                                love the premium quality and service provided by Team Tavya! Highly
+                                                recommended!
                                             </p>
                                             <div class="text-end">
                                                 <img src="assets/images/quote.png" alt="" style="width: 30px;">
@@ -677,16 +643,16 @@
                         </div>
                         <div class="item py-4">
                             <div class="row justify-content-center align-items-center gap-3">
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     <div class="testimonials-image text-center">
-                                        <img src="assets/images/team-1.png" alt="">
+                                        <img src="assets/images/Review-3.webp" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="testimonials-content">
                                         <img src="assets/images/quote.png" alt="" style="width: 30px;">
                                         <div class="d-flex justify-content-between testimonials-name">
-                                            <p>Pinku Rathour <span>- Web Developer</span></p>
+                                            <p>Shivani and Akash <span>- Bride and Groom</span></p>
                                             <div class="star-icon">
                                                 <span class="iconify" data-icon="ic:baseline-star"></span>
                                                 <span class="iconify" data-icon="ic:baseline-star"></span>
@@ -696,12 +662,54 @@
                                             </div>
                                         </div>
                                         <div class="main-slide-content">
-                                            <h2 class="py-1">Beautiful and personalised gift hampers</h2>
-                                            <p>Absolutely in love with the quality, totally worth the money. Everyone
-                                                asked me where I got the products from, everyone was so impressed and
-                                                loved the gifts. Coming from the person who has ordered the gifts for
-                                                her own wedding, I must tell you you’re going to love it. Buy without
-                                                thinking twice 👏🏻</p>
+                                            <h2 class="py-1">Beautiful and personalised gift hampers
+                                            </h2>
+                                            <p>We have enjoyed every step of the experience with Tavya. They went above
+                                                and beyond to deliver our order through personal transportation to
+                                                ensure it reached us on time due to the bulk order with limited time!
+                                                Thank you so much for making our wedding day memorable. We appreciate
+                                                you and your hard-working team. Absolutely recommended.
+                                            </p>
+                                            <div class="text-end">
+                                                <img src="assets/images/quote.png" alt="" style="width: 30px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item py-4">
+                            <div class="row justify-content-center align-items-center gap-3">
+                                <div class="col-lg-4">
+                                    <div class="testimonials-image text-center">
+                                        <img src="assets/images/Review-4.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="testimonials-content">
+                                        <img src="assets/images/quote.png" alt="" style="width: 30px;">
+                                        <div class="d-flex justify-content-between testimonials-name">
+                                            <p>Piyush Rajput <span>- Groom
+                                                </span></p>
+                                            <div class="star-icon">
+                                                <span class="iconify" data-icon="ic:baseline-star"></span>
+                                                <span class="iconify" data-icon="ic:baseline-star"></span>
+                                                <span class="iconify" data-icon="ic:baseline-star"></span>
+                                                <span class="iconify" data-icon="ic:baseline-star"></span>
+                                                <span class="iconify" data-icon="ic:baseline-star"></span>
+                                            </div>
+                                        </div>
+                                        <div class="main-slide-content">
+                                            <h2 class="py-1">Absolutely in love with the products
+                                            </h2>
+                                            <p>We were so happy we found Tavya. They maintained clear communication,
+                                                listened to our ideas, and provided significant input. The products were
+                                                packaged really well, with nothing broken. Everything arrived ahead of
+                                                schedule! And the favors are very different and beautiful. The quality
+                                                is excellent and can be used repeatedly. Thank you, Team Tavya, for the
+                                                hampers!
+
+                                                👏🏻</p>
                                             <div class="text-end">
                                                 <img src="assets/images/quote.png" alt="" style="width: 30px;">
                                             </div>
@@ -758,7 +766,15 @@
                         <div class="socail-icon">
                             <ul class="list-unstyled justify-content-end d-flex align-items-center gap-2">
                                 <li><a href="https://www.linkedin.com/company/tavya-ceramics/posts/?feedView=images&viewAsMember=true"
+                                        target="_blank"><img src="assets/images/wedmegood.png" alt=""></li>
+                                <li><a href="https://www.linkedin.com/company/tavya-ceramics/posts/?feedView=images&viewAsMember=true"
+                                        target="_blank"><img src="assets/images/weddingwire.png" alt=""></li>
+                                <li><a href="https://www.linkedin.com/company/tavya-ceramics/posts/?feedView=images&viewAsMember=true"
+                                        target="_blank"><img src="assets/images/instagram.png" alt=""></li>
+                                <li><a href="https://www.linkedin.com/company/tavya-ceramics/posts/?feedView=images&viewAsMember=true"
                                         target="_blank"><img src="assets/images/linkedin.png" alt=""></li>
+                                <li><a href="https://www.linkedin.com/company/tavya-ceramics/posts/?feedView=images&viewAsMember=true"
+                                        target="_blank"><img src="assets/images/printrest.jpg" alt=""></li>
 
                                 <li><a href="https://www.facebook.com/tavya.ceramics" target="_blank"><img
                                             src="assets/images/facebook.png" alt=""></a></li>
@@ -784,12 +800,12 @@
                     </div>
                     <div class="col-6 col-sm-6">
                         <div class="modal-up">
-                            <div class="mb-4">
+                            <div class="mb-4 mt-4">
                                 <h2>Hi there,</h2>
-                                <h3>Looking for Gift Hampers?
-                                </h3>
+                                <h2 class="pt-1">Looking for Gift Hampers?
+                                </h2>
                             </div>
-                            <ul class="list-unstyled d-flex gap-3 modal-buttons py-2">
+                            <ul class="list-unstyled d-flex gap-3 modal-buttons mb-2">
                                 <li>
                                     <a href="" class="text-white btn">Wedding Favors</a>
                                 </li>
@@ -800,7 +816,7 @@
 
 
                             </ul>
-                            <ul class="list-unstyled d-flex gap-3 modal-buttons py-2">
+                            <ul class="list-unstyled d-flex gap-3 modal-buttons">
                                 <li>
                                     <a href="" class="text-white btn">Corporate Gifts</a>
                                 </li>
@@ -809,25 +825,18 @@
                                 </li>
 
                             </ul>
-                            <ul class="list-unstyled d-flex gap-3 modal-buttons py-2">
-                                <li>
-                                    <a href="" class="text-white btn">corporate Gifts</a>
-                                </li>
-                                <li>
-                                    <a href="" class="text-white btn">Event Gifts</a>
-                                </li>
+                            <form>
+                                <div class="group mb-3">
+                                    <input type="text" placeholder="Full Name" class="form-control">
+                                </div>
+                                <div class="group mb-3">
+                                    <input type="number" placeholder="Contact Number" class="form-control">
+                                </div>
 
-                            </ul>
+                                <div class="group mb-1">
+                                    <button class="btn bg-secondary px-5 py-1">Submit</button>
+                                </div>
 
-                            <form class="d-flex gap-0">
-                                <input
-                                    class="px-3 py-2 flex-grow-1 rounded-start border border-warning border-end-0 outline-0 form-control"
-                                    type="email" placeholder="kindly enter your email here..."
-                                    style="border-radius: 5px 0px 0px 5px;" />
-                                <button
-                                    class="py-2 px-3 rounded-end border-0 border-up-line text-white d-flex justify-content-center align-items-center">
-                                    <i class="iconify fs-4" data-icon="la:telegram-plane"></i>
-                                </button>
                             </form>
                             <p>We will get back to you within 24 hours</p>
                         </div>
@@ -847,6 +856,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="index.js"></script>
+<script src="./assets/js/index.js"></script>
 
 </html>
