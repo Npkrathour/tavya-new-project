@@ -38,8 +38,83 @@
   .home-content h1 {
     font-size: 90px;
   }
+  .we-are-body h4 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .we-are-body p {
+    padding-top: 0px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .our-work h4 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .we-love p {
+    font-size: 14px;
+  }
+  .testimonials-sliders .testimonials-image img {
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .testimonials-content .testimonials-name p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .testimonials-content .testimonials-name p span {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .star-icon .iconify {
+    font-size: 20px;
+  }
+  .main-slide-content p {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 23px;
+  }
+  .main-slide-content h2 {
+    font-size: 25px;
+    padding-top: 30px;
+  }
+  .owl-nav {
+    padding-top: 0px;
+  }
+  .footer-section h1 {
+    font-size: 30px;
+  }
+  .footer-section .address-details h3 {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0px;
+  }
+  .modal-buttons li a {
+    padding: 8px 6px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  .modal-heading h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .modal-heading p {
+    font-size: 11px;
+  }
 }
 @media screen and (max-width: 820px) {
 }
 @media screen and (max-width: 520px) {
+  .home-content span {
+    font-size: 70px;
+  }
+  .home-content h1 {
+    font-size: 70px;
+  }
 }

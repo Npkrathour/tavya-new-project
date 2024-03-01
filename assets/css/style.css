@@ -5,9 +5,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-.modal {
-  padding-right: 15px !important;
-}
 :root {
   --primaryColor: #ff7f50;
   --secondaryColor: #000000;
@@ -38,7 +35,7 @@ p {
 .navbar {
   background-color: #ffffff;
   backdrop-filter: blur(4px);
-  padding: 15px 10px;
+  padding: 0px 10px;
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -80,20 +77,20 @@ p {
 .mobile-end img {
   width: 100%;
 }
-.animation-btn button::before:hover {
+/* .animation-btn button::before:hover {
   position: absolute;
   content: " ";
   left: 0;
   top: 0;
   background-color: white;
   width: 100%;
-}
+} */
 
-.animation-btn button {
+/* .animation-btn button {
   margin-left: 65%;
   background-color: red;
   transition: 0.5s;
-}
+} */
 
 /* ===========who we are========= */
 .we-are-body {
@@ -113,7 +110,6 @@ p {
   & p {
     padding-top: 20px;
     font-weight: 400;
-    padding-top: 20px;
   }
   & a {
     font-size: 15px;
@@ -726,4 +722,10 @@ input[type="number"] {
   background-color: #f04975;
   color: #ffffff;
   padding: 8px 25px;
+}
+.group .btn {
+  background-color: #f04975;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
 }

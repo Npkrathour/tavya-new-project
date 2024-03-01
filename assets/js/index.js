@@ -8,12 +8,17 @@ AOS.init({
   anchorPlacement: "top-bottom",
 });
 
+// Pop up
 $(document).ready(function () {
-  // Set a delay of 3 seconds (3000 milliseconds)
+  // Reinitialize modal script
+  $("#exampleModal").modal({
+    show: false,
+  });
+
+  // Open modal after 5000 milliseconds (5 seconds)
   setTimeout(function () {
-    // Show the modal using Bootstrap's modal method
     $("#exampleModal").modal("show");
-  }, 1000);
+  }, 4000);
 });
 
 // The Slideshow class.
@@ -31,7 +36,7 @@ $(".owl-carousel").owlCarousel({
       items: 1,
     },
     600: {
-      items: 3,
+      items: 1,
     },
     1000: {
       items: 1,
