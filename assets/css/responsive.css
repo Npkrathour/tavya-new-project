@@ -73,7 +73,7 @@
     font-weight: 500;
   }
   .star-icon .iconify {
-    font-size: 20px;
+    font-size: 17px;
   }
   .main-slide-content p {
     font-size: 14px;
@@ -94,6 +94,7 @@
     font-size: 25px;
     font-weight: 600;
     letter-spacing: 0px;
+    padding: 0px;
   }
   .modal-buttons li a {
     padding: 8px 6px;
@@ -148,5 +149,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .testimonials-content .testimonials-name p {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .testimonials-content .testimonials-name p span {
+    font-size: 13px;
+    font-weight: 500;
   }
 }
