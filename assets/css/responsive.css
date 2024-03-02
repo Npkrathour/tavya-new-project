@@ -108,6 +108,13 @@
   .modal-heading p {
     font-size: 11px;
   }
+  .navbar .nav-item .nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    padding: 0px 15px;
+    font-family: "Montserrat", sans-serif;
+  }
 }
 @media screen and (max-width: 820px) {
 }
@@ -157,5 +164,23 @@
   .testimonials-content .testimonials-name p span {
     font-size: 13px;
     font-weight: 500;
+  }
+  .who-we-are .big-text {
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    padding: 0px 0px 0px 0px;
+  }
+  .big-text {
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    padding: 0px 0px 0px 0px;
+  }
+  .padding-top-bottom {
+    padding: 20px 0px;
+  }
+  .our-services h1 {
+    font-size: 55px;
   }
 }
