@@ -178,7 +178,7 @@
     padding: 0px 0px 0px 0px;
   }
   .padding-top-bottom {
-    padding: 20px 0px;
+    padding: 30px 0px;
   }
   .our-services h1 {
     font-size: 55px;
@@ -186,5 +186,8 @@
   .enquiry-form-modal label {
     font-size: 10px;
     line-height: 0.9;
+  }
+  .home-section {
+    height: 600px;
   }
 }

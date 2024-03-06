@@ -302,3 +302,9 @@ $(document).ready(function () {
     }
   }
 });
+
+// change color
+
+function myFunction() {
+  document.getElementById("changeColor").style.background = "red";
+}
