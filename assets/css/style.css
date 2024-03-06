@@ -607,8 +607,12 @@ p {
   background-color: rgb(243, 243, 243);
   border: 2px solid rgb(54, 53, 53);
   border-radius: 5px;
-  color: #56595c;
 }
+
+.form-section input::placeholder {
+  color: #000 !important;
+}
+
 .form-section .form-select:focus {
   border-color: #000000;
   outline: 0;
@@ -701,7 +705,7 @@ input[type="number"] {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  padding-bottom: 5px;
+  line-height: 0.8;
 }
 .enquiry-form-modal .btn {
   background-color: #f04975;
@@ -739,4 +743,115 @@ input[type="number"] {
 .our-work .position-absolute {
   width: 100%;
   max-width: 30%;
+}
+.form-group {
+  margin-bottom: 0.6rem;
+}
+.form-group span {
+  display: none;
+}
+
+.form-group.error span {
+  display: block;
+  font-size: 13px;
+  color: red;
+}
+
+.form-group.error input,
+.form-group.error select {
+  border-color: red;
+}
+
+.modal#statusSuccessModal .modal-content,
+.modal#statusErrorsModal .modal-content {
+  border-radius: 20px;
+}
+.modal#statusSuccessModal .modal-content svg,
+.modal#statusErrorsModal .modal-content svg {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.modal#statusSuccessModal .modal-content .path,
+.modal#statusErrorsModal .modal-content .path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+.modal#statusSuccessModal .modal-content .path.circle,
+.modal#statusErrorsModal .modal-content .path.circle {
+  -webkit-animation: dash 0.9s ease-in-out;
+  animation: dash 0.9s ease-in-out;
+}
+.modal#statusSuccessModal .modal-content .path.line,
+.modal#statusErrorsModal .modal-content .path.line {
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 0.95s 0.35s ease-in-out forwards;
+  animation: dash 0.95s 0.35s ease-in-out forwards;
+}
+.modal#statusSuccessModal .modal-content .path.check,
+.modal#statusErrorsModal .modal-content .path.check {
+  stroke-dashoffset: -100;
+  -webkit-animation: dash-check 0.95s 0.35s ease-in-out forwards;
+  animation: dash-check 0.95s 0.35s ease-in-out forwards;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+.box00 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.form-loading {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }

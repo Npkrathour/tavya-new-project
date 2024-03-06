@@ -162,33 +162,39 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-sm-6">
-                                                <div class="modal-up">
+                                                <div class="modal-up leadsgenarates">
                                                     <div class="mb-4">
                                                         <h2>Hi there,</h2>
                                                         <h3>Fill out the form to download the Magazine.</h3>
                                                     </div>
-                                                    <form get="" action="" class=" ">
-                                                        <div class="group mb-3">
+                                                    <form id="magazineForm">
+                                                        <div class="form-group">
                                                             <input
                                                                 class="px-3 py-2 rounded-start border border-warning border outline-0 form-control"
-                                                                type="text" placeholder="Full Name" />
+                                                                type="text" placeholder="Full Name" id="leadsname" />
+                                                            <span>Error</span>
                                                         </div>
-                                                        <div class="group mb-3">
+                                                        <div class="form-group">
                                                             <input
                                                                 class="px-3 py-2 rounded-start border border-warning border outline-0 form-control"
-                                                                type="text" placeholder="Contact Number" />
+                                                                type="text" placeholder="Contact Number"
+                                                                id="leadsnumber" />
+                                                            <span>Error</span>
                                                         </div>
-                                                        <div class="d-flex gap-0">
-                                                            <input
-                                                                class="px-3 py-2 flex-grow-1 rounded-start border border-warning border-end-0 outline-0 form-control"
-                                                                type="email" placeholder="Email id"
-                                                                style="border-radius: 5px 0px 0px 5px;" />
-                                                            <button
-                                                                class="py-2 px-3 rounded-end border-0 border-up-line text-white d-flex justify-content-center align-items-center">
-                                                                <i class="iconify fs-4"
-                                                                    data-icon="la:telegram-plane"></i>
-                                                            </button>
+                                                        <div class="form-group">
+                                                            <input class="px-3 py-2 form-control border-warning"
+                                                                type="email" placeholder="Email id" id="leadsemail" />
+
+                                                            <span>Error</span>
+
                                                         </div>
+
+                                                        <button type="submit"
+                                                            class="btn btn-success py-2 w-100 d-flex justify-content-center align-items-center">
+                                                            <i class="iconify fs-4" data-icon="la:telegram-plane"></i>
+                                                            &nbsp;
+                                                            Submit
+                                                        </button>
                                                     </form>
                                                 </div>
 
@@ -313,104 +319,117 @@
         </section>
 
         <!--===================== Modal============== -->
-        <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+        <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <button type="button" class="btn-close bg-secondary p-2 rounded-circle position-absolute"
-                        style="top: 10px;right: 10px;" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="modal-body enquiry-form-modal py-3">
-                        <h1>Enquiry Form</h1>
-                        <div class="row">
-                            <form action="" method="post">
-                                <div class="col-12 mb-2">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label for="number">Contact Number</label>
-                                    <input type="text" class="form-control" id="number">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label for="email">Email Id</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label for="">Per Hamper Budget (if decided)
-                                    </label>
-                                    <input type="number" class="form-control" placeholder="INR" id="number">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label for="">No. of Gift Hampers (approx)
-                                    </label>
-                                    <input type="number" class="form-control" placeholder="00" id="number">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label for="">Requirements (if any)
-                                    </label>
-                                    <textarea name="" id="" class="form-control"></textarea>
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <button class="btn" type="button" value="button">Submit Now</button>
-                                </div>
-                            </form>
+
+                    <div class="modal-body enquiry-form-modal">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h1 class="m-0">Enquiry Form</h1>
+                            <button type="button" class="btn-close border-2 border-secondary" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
+                        <form id="enquiryForm">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" class="form-control" id="enquiryName">
+                                        <span>Required Name</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="number">Contact Number</label>
+                                        <input type="text" class="form-control" id="enquiryNumber">
+                                        <span>Required Number</span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="email">Email Id</label>
+                                        <input type="email" class="form-control" id="enquiryEmail">
+                                        <span>Required Email</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="">Per Hamper Budget (if decided)
+                                        </label>
+                                        <input type="number" class="form-control" placeholder="INR"
+                                            id="enquiryhamperBudget">
+                                        <span>Required Hampers</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="">No. of Gift Hampers (approx)
+                                        </label>
+                                        <input type="number" class="form-control" placeholder="00" id="giftNumber">
+                                        <span>Required No of Hampers</span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="">Requirements (if any)
+                                        </label>
+                                        <textarea name="" id="enquiryRequirements" rows="5"
+                                            class="form-control"></textarea>
+                                        <span>Enter hampers</span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group text-end">
+                                        <button class="btn" type="submit">Submit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- =================================Form container=================== -->
-        <section class="form-section shadow border position-fixed bottom-0 w-100 bg-white z-3 d-lg-block d-none">
+        <section
+            class="form-section shadow border position-fixed bottom-0 w-100 bg-white z-3 d-lg-block d-none pt-3 pb-1">
             <div class="container-fluid">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-12">
-                        <div class="main-form pt-2">
-                            <form action="" method="get">
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col-lg-2 text-center col-md-6 col-12 my-2">
-                                        <div class="mb-3">
-                                            <h3>Contact Us:</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-6 col-12 my-2">
-                                        <div class="mb-3">
-                                            <input type="text" name="" id="" class="form-control" placeholder="Name"
-                                                aria-describedby="helpId" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <input type="text" name="" id="" class="form-control"
-                                                placeholder="Contact Number" aria-describedby="helpId" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <input type="email" name="" id="" class="form-control"
-                                                placeholder="Email id" aria-describedby="helpId" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <select class="form-select form-select-lg mb-3"
-                                                aria-label="Large select example">
-                                                <option selected disabled>Requirements</option>
-                                                <option value="1"> Wedding Favors</option>
-                                                <option value="2">Event Gifts</option>
-                                                <option value="3">Corporate Gifts</option>
-                                                <option value="3">Others</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <button type="button" class="btn text-white" value="">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                <div class="main-form pt-2">
+                    <form class="form" id="bottom-form">
+                        <div class="row row-cols-6 justify-content-center align-items-start">
+                            <h3 class="mb-2 fw-bold text-center">Contact Us:</h3>
+                            <div class="form-group">
+                                <input type="text" name="fname" id="bottom-form-fname" class="form-control"
+                                    placeholder="Full Name" />
+                                <span>error</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" id="bottom-form-phone" class="form-control"
+                                    placeholder="Contact Number" />
+                                <span>error</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="bottom-form-email" class="form-control"
+                                    placeholder="Email id" />
+                                <span>error</span>
+                            </div>
+                            <div class="form-group">
+                                <select id="bottom-form-requirements" class="form-select form-select-lg"
+                                    aria-label="Large select example">
+                                    <option selected disabled value="">Requirements</option>
+                                    <option value="Wedding Favors"> Wedding Favors</option>
+                                    <option value="Event Gifts">Event Gifts</option>
+                                    <option value="Corporate Gifts">Corporate Gifts</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                                <span>error</span>
+                            </div>
+                            <div class="px-3">
+                                <button type="submit" class="btn btn-lg mb-2 w-100 text-white">Submit</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -838,16 +857,18 @@
                                 </li>
 
                             </ul>
-                            <form>
-                                <div class="group mb-3">
-                                    <input type="text" placeholder="Full Name" class="form-control">
+                            <form id="popform">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Full Name" class="form-control" id="popname">
+                                    <span>Error</span>
                                 </div>
-                                <div class="group mb-3">
-                                    <input type="text" placeholder="Contact Number" class="form-control">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Contact Number" class="form-control" id="popnumber">
+                                    <span>Error</span>
                                 </div>
 
-                                <div class="group mb-1">
-                                    <button class="btn px-5 py-2">Submit</button>
+                                <div class="group">
+                                    <button class="btn w-100" type="submit">Submit</button>
                                 </div>
 
                             </form>
@@ -859,11 +880,70 @@
             </div>
         </div>
     </div>
-    <!-- ================================chatbot============= -->
 
 
-    <!-- ================================chatbot============= -->
+    <div style="display: none;" class="p-3 form-loading position-fixed top-0 bottom-0 start-0 right-0 z-3 w-100">
+        <div class="spinner-border text-success" style="width: 4rem; height: 4rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div class="modal fade" id="statusErrorsModal" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center p-lg-4">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                        <circle class="path circle" fill="none" stroke="#db3646" stroke-width="6" stroke-miterlimit="10"
+                            cx="65.1" cy="65.1" r="62.1" />
+                        <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round"
+                            stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+                        <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round"
+                            stroke-miterlimit="10" x1="95.8" y1="38" X2="34.4" y2="92.2" />
+                    </svg>
+                    <h4 class="text-danger mt-3">Somthing went wrong</h4>
+                    <p class="mt-3">We apologize, but it seems there's a glitch in our system, and your query couldn't
+                        be submitted. Our team is on it to fix the issue. Thank you for your understanding!</p>
+                    <button type="button" class="btn px-4 mt-3 btn-danger" data-bs-dismiss="modal">Ok, Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="statusSuccessModal" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center p-lg-4">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                        <circle class="path circle" fill="none" stroke="#198754" stroke-width="6" stroke-miterlimit="10"
+                            cx="65.1" cy="65.1" r="62.1" />
+                        <polyline class="path check" fill="none" stroke="#198754" stroke-width="6"
+                            stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                    </svg>
+                    <h4 class="text-success mt-3">Thanks for reaching out!</h4>
+                    <p class="mt-3">Your query has landed in our inbox, and we're super excited to assist you. One of
+                        our cheerful executives will reach out to you within the next 24 hours.</p>
+                    <button type="button" class="btn px-4 mt-3 btn-success" data-bs-dismiss="modal">Ok,
+                        Thankyou</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="myToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Kindly fill required fields ..!
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
 </body>
+<!-- ================script========= -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
