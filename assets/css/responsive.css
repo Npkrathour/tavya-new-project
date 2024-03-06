@@ -183,4 +183,8 @@
   .our-services h1 {
     font-size: 55px;
   }
+  .enquiry-form-modal label {
+    font-size: 10px;
+    line-height: 0.9;
+  }
 }
