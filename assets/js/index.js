@@ -9,15 +9,9 @@ $(document).ready(function () {
     anchorPlacement: "top-bottom",
   });
 
-  // Pop up
-  // Reinitialize modal script
-  $("#exampleModal").modal({
-    show: false,
-  });
-
   // Open modal after 5000 milliseconds (5 seconds)
   setTimeout(function () {
-    $("#exampleModal").modal("show");
+    $("#popModal").modal("show");
   }, 4000);
 
   // The Slideshow class.
@@ -43,12 +37,6 @@ $(document).ready(function () {
     },
   });
 
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
   // pop up slider
   $(".pop-up-slider").owlCarousel({
     loop: true,
@@ -67,6 +55,16 @@ $(document).ready(function () {
     },
   });
 
+  function downloadPDF() {
+    const pdfFilePath = "assets/images/tavya-wedding-favors.pdf";
+    const downloadLink = document.createElement("a");
+    downloadLink.href = pdfFilePath;
+    downloadLink.download = "tavya-ceramics.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
+
   function showError(input, message) {
     let inputParent = input.parentElement;
     inputParent.classList.add("error");
@@ -82,6 +80,35 @@ $(document).ready(function () {
   const fullNameRegex = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  function sendMailer(form, formData) {
+    $(".form-loading").show();
+    fetch("https://tavya.vercel.app/api/send-mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": "70dda1017d7fc1afd90e019fedd4ddfb93d6ea373821d175eaf524b02ac13c65",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        $(".form-loading").hide();
+        form.reset();
+
+        if (response.ok) {
+          $("#statusSuccessModal").modal("show");
+        } else {
+          console.error("Error:", response.statusText);
+          $("#statusErrorsModal").modal("show");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        $(".form-loading").hide();
+        form.reset();
+        $("#statusErrorsModal").modal("show");
+      });
+  }
+
   // bottom form validation
   let btmForm = document.querySelector("#bottom-form");
   let btmName = document.querySelector("#bottom-form-fname");
@@ -93,35 +120,8 @@ $(document).ready(function () {
     e.preventDefault();
     const formData = handleBtm();
 
-    console.log(formData);
-
     if (formData !== undefined) {
-      $(".form-loading").show();
-      fetch("https://tavya.vercel.app/api/send-mail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": "70dda1017d7fc1afd90e019fedd4ddfb93d6ea373821d175eaf524b02ac13c65",
-        },
-        body: JSON.stringify(formData),
-      })
-        .then((response) => {
-          $(".form-loading").hide();
-          btmForm.reset();
-
-          if (response.ok) {
-            $("#statusSuccessModal").modal("show");
-          } else {
-            console.error("Error:", response.statusText);
-            $("#statusErrorsModal").modal("show");
-          }
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          $(".form-loading").hide();
-          btmForm.reset();
-          $("#statusErrorsModal").modal("show");
-        });
+      sendMailer(btmForm, formData);
     }
   });
 
@@ -184,7 +184,12 @@ $(document).ready(function () {
 
   EnquiryFrom.addEventListener("submit", (e) => {
     e.preventDefault();
-    enquiry();
+    const formData = enquiry();
+    console.log(formData);
+    if (formData !== undefined) {
+      sendMailer(EnquiryFrom, formData);
+      $("#enquiryModal").modal("hide");
+    }
   });
 
   function enquiry() {
@@ -195,44 +200,51 @@ $(document).ready(function () {
     let enquirygiftValue = giftNumber.value;
     let enquiryRequirementsValue = enquiryRequirements.value;
 
-    const enquiryNameRegex = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/;
-    const enquiryemailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     if (enquirynameValue === "") {
-      showError(enquiryName, "Name is required");
+      return showError(enquiryName, "Name is required");
     } else {
       notError(enquiryName);
     }
     if (enquirynumberValue === "") {
-      showError(enquiryNumber, "Number is required");
+      return showError(enquiryNumber, "Number is required");
     } else {
       notError(enquiryNumber);
     }
     if (enquiryemailValue === "") {
-      showError(enquiryEmail, "Email id required");
-    } else if (enquiryNameRegex.test(enquiryEmail)) {
-      showError(enquiryEmail, "Enter a valid email");
+      return showError(enquiryEmail, "Email id required");
+    } else if (emailRegex.test(enquiryEmail)) {
+      return showError(enquiryEmail, "Enter a valid email");
     } else {
       notError(enquiryEmail);
     }
+
     if (enquirybudgetValue === "") {
-      showError(enquiryhamperBudget, "Enter a budget");
-    }
-    if (enquirygiftValue === "") {
-      showError(enquiryhamperBudget, "Enter a Hampers");
+      return showError(enquiryhamperBudget, "Enter a budget");
     } else {
       notError(enquiryhamperBudget);
     }
+
     if (enquirygiftValue === "") {
-      showError(giftNumber, "Enter Gift hampers");
+      return showError(giftNumber, "Enter Gift hampers");
     } else {
       notError(giftNumber);
     }
+
     if (enquiryRequirementsValue === "") {
-      showError(enquiryRequirements, "Enter a requirements");
+      return showError(enquiryRequirements, "Enter a requirements");
     } else {
       notError(enquiryRequirements);
     }
+
+    return {
+      formName: "enquiry-form",
+      fullName: enquirynameValue,
+      email: enquiryemailValue,
+      phone: enquirynumberValue,
+      hamperBudget: enquirybudgetValue,
+      noOfHampers: enquirygiftValue,
+      requirement: enquiryRequirementsValue,
+    };
   }
 
   // leads form
@@ -244,67 +256,93 @@ $(document).ready(function () {
 
   leadsForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    leadshandle();
+    const formData = leadsHandler();
+
+    console.log(formData);
+    if (formData !== undefined) {
+      sendMailer(leadsForm, formData);
+      $("#magzineModal").modal("hide");
+      downloadPDF();
+    }
   });
 
-  function leadshandle() {
+  function leadsHandler() {
     let leadnameValue = leadsName.value;
     let leadsnumberValue = leadsNumber.value;
     let leademailValue = leadsEmail.value;
 
     if (leadnameValue === "") {
-      showError(leadsName, "Name is required");
-    } else if (!fullNameRegex.test(leadsName)) {
-      notError(leadsName, "Enter valid Name");
+      return showError(leadsName, "Name is required");
+    } else if (!fullNameRegex.test(leadnameValue)) {
+      return showError(leadsName, "Enter valid Name");
     } else {
       notError(leadsName);
     }
     if (leadsnumberValue === "") {
-      showError(leadsNumber, "Number is required");
+      return showError(leadsNumber, "Number is required");
     } else {
       notError(leadsNumber);
     }
     if (leademailValue === "") {
-      showError(leadsEmail, "Email id required");
+      return showError(leadsEmail, "Email id required");
     } else if (emailRegex.test(leadsEmail)) {
-      showError(leadsEmail, "Enter a valid email");
+      return showError(leadsEmail, "Enter a valid email");
     } else {
       notError(leadsEmail);
     }
+
+    return {
+      formName: "magzine-form",
+      fullName: leadnameValue,
+      email: leademailValue,
+      phone: leadsnumberValue,
+    };
   }
 
   // pop form
 
   let popForm = document.querySelector("#popform");
   let popName = document.querySelector("#popname");
+  let popEmail = document.querySelector("#popemail");
   let popNumber = document.querySelector("#popnumber");
 
   popForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    pophandle();
+    const formData = pophandle();
+
+    console.log(formData);
+    if (formData !== undefined) {
+      sendMailer(popForm, formData);
+      $("#popModal").modal("hide");
+    }
   });
 
   function pophandle() {
     let popupnameValue = popName.value;
+    let popupemailValue = popEmail.value;
     let popupnumberValue = popNumber.value;
 
     if (popupnameValue === "") {
-      showError(popName, "Name is required");
-    } else if (!fullNameRegex.test(popName)) {
-      notError(popName, "Enter valid Name");
+      return showError(popName, "Name is required");
+    } else if (!fullNameRegex.test(popupnameValue)) {
+      return showError(popName, "Enter valid Name");
     } else {
       notError(popName);
     }
+
+    if (popupemailValue === "") {
+      return showError(popEmail, "Email is required");
+    } else if (!emailRegex.test(popupemailValue)) {
+      return showError(popEmail, "Enter valid Email");
+    } else {
+      notError(popEmail);
+    }
+
     if (popupnumberValue === "") {
-      showError(popNumber, "Number is required");
+      return showError(popNumber, "Number is required");
     } else {
       notError(popNumber);
     }
+    return { formName: "pop-form", fullName: popupnameValue, email: popupemailValue, phone: popupnumberValue };
   }
 });
-
-// change color
-
-function myFunction() {
-  document.getElementById("changeColor").style.background = "red";
-}

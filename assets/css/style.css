@@ -36,9 +36,7 @@ p {
   background-color: #ffffff;
   backdrop-filter: blur(4px);
   padding: 0px 10px;
-  position: fixed;
   width: 100%;
-  z-index: 99;
 }
 .navbar .nav-item .nav-link {
   font-size: 15px;
@@ -853,5 +851,5 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
 }
