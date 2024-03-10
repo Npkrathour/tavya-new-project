@@ -257,8 +257,6 @@ $(document).ready(function () {
   leadsForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = leadsHandler();
-
-    console.log(formData);
     if (formData !== undefined) {
       sendMailer(leadsForm, formData);
       $("#magzineModal").modal("hide");
@@ -305,12 +303,12 @@ $(document).ready(function () {
   let popName = document.querySelector("#popname");
   let popEmail = document.querySelector("#popemail");
   let popNumber = document.querySelector("#popnumber");
+  // Get all radio buttons
+  var radioButtons = document.getElementsByName("pop-requirements");
 
   popForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = pophandle();
-
-    console.log(formData);
     if (formData !== undefined) {
       sendMailer(popForm, formData);
       $("#popModal").modal("hide");
@@ -321,6 +319,14 @@ $(document).ready(function () {
     let popupnameValue = popName.value;
     let popupemailValue = popEmail.value;
     let popupnumberValue = popNumber.value;
+
+    var selectedRadioButton = $("input[name=pop-requirements]:checked").val(); //get value from radio button
+
+    if (!selectedRadioButton) {
+      return showError(radioButtons[0], "Please select an option");
+    } else {
+      notError(radioButtons[0]);
+    }
 
     if (popupnameValue === "") {
       return showError(popName, "Name is required");
@@ -343,6 +349,13 @@ $(document).ready(function () {
     } else {
       notError(popNumber);
     }
-    return { formName: "pop-form", fullName: popupnameValue, email: popupemailValue, phone: popupnumberValue };
+
+    return {
+      formName: "pop-form",
+      fullName: popupnameValue,
+      email: popupemailValue,
+      phone: popupnumberValue,
+      requirement: selectedRadioButton,
+    };
   }
 });

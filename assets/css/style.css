@@ -380,11 +380,12 @@ p {
 .star-icon .iconify {
   font-size: 30px;
   color: #f6ca1c;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 }
 .testimonials-content .testimonials-name p {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 0px;
 }
 .testimonials-content .testimonials-name p span {
   font-size: 16px;
@@ -863,4 +864,28 @@ input[type="number"] {
 }
 .term-condition a:hover {
   text-decoration: underline;
+}
+.copyright p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#popform input[type="radio"] {
+  display: none;
+}
+
+#popform label {
+  padding: 8px 10px;
+  width: 48%;
+  text-align: center;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+#popform input[type="radio"]:checked + label {
+  background: #f04975;
+  border-color: #f04975;
+  color: #fff;
 }

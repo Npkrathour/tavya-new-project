@@ -197,4 +197,11 @@
   .home-section {
     height: 600px;
   }
+  .term-condition a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .copyright p {
+    font-size: 14px;
+  }
 }
