@@ -5,6 +5,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --primaryColor: #ff7f50;
   --secondaryColor: #000000;
