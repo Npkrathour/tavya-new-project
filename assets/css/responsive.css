@@ -204,4 +204,7 @@
   .copyright p {
     font-size: 14px;
   }
+  .testimonial-mobile p {
+    width: 48%;
+  }
 }
