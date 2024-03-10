@@ -132,7 +132,7 @@ $(document).ready(function () {
     let requirementsValue = btmRequirements.value;
 
     if (nameValue === "") {
-      return showError(btmName, "FullName is required");
+      return showError(btmName, "Full Name is required");
     } else if (!fullNameRegex.test(nameValue)) {
       return showError(btmName, "Enter valid Name");
     } else {
@@ -140,7 +140,7 @@ $(document).ready(function () {
     }
 
     if (phoneValue === "") {
-      return showError(btmPhone, "value is required");
+      return showError(btmPhone, "Value is required");
     } else if (isNaN(phoneValue)) {
       return showError(btmPhone, "Enter Only digit");
     } else if (phoneValue.length !== 10) {
@@ -150,15 +150,15 @@ $(document).ready(function () {
     }
 
     if (emailValue === "") {
-      return showError(btmEmail, "Enter valid Value");
+      return showError(btmEmail, "Email id is required");
     } else if (!emailRegex.test(emailValue)) {
-      return showError(emailValue, "invalid email");
+      return showError(emailValue, "Enter valid email id");
     } else {
       notError(btmEmail);
     }
 
     if (requirementsValue === "") {
-      return showError(btmRequirements, "kindly select an option.");
+      return showError(btmRequirements, "Kindly select an option.");
     } else {
       notError(btmRequirements);
     }
