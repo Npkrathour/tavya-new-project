@@ -9,9 +9,12 @@ $(document).ready(function () {
     anchorPlacement: "top-bottom",
   });
 
-  // Open modal after 5000 milliseconds (5 seconds)
+  // // Open modal after 5000 milliseconds (5 seconds)
   setTimeout(function () {
-    $("#popModal").modal("show");
+    if (sessionStorage.getItem("#popModal") !== "true") {
+      $("#popModal").modal("show");
+      sessionStorage.setItem("#popModal", true);
+    }
   }, 4000);
 
   // The Slideshow class.
