@@ -2,7 +2,7 @@ $(document).ready(function () {
   AOS.init({
     offset: 120,
     delay: 0,
-    duration: 1000,
+    duration: 800,
     easing: "ease",
     once: false,
     mirror: false,
